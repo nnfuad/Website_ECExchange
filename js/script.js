@@ -37,4 +37,3 @@ body.classList.add('theme-yellow');
         body.classList.remove('theme-yellow');
     });
 });
-

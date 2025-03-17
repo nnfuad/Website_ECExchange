@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-xl font-bold">My Website</a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+            <a href="#" class="text-white">Home</a>
+            <a href="#" class="text-white">About</a>
+
+            <!-- Dropdown -->
+            <div class="relative group">
+                <button class="text-white flex">Services </button>
+                <div class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Web Design</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">SEO</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Marketing</a>
+                </div>
+            </div>
+
+            <a href="#" class="text-white">Contact</a>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

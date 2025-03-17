@@ -18,7 +18,7 @@ body, html {
 
 /* Header */
 .header {
-    background: #4CAF50; /* Match hexagon color */
+    background: #3be477; /* Match hexagon color */
     color: black;
     display: flex;
     align-items: center;
@@ -38,13 +38,14 @@ body, html {
     flex-grow: 1;
 }
 
+
 /* Footer */
 .footer {
     position: fixed;
     bottom: 0;
     height: 20px;
     width: 100%;
-    background: #4CAF50; /* Ensure background is visible */
+    background: #3be477; /* Ensure background is visible */
     color: black;
     text-align: center;
     padding-bottom: 10px;
@@ -81,7 +82,7 @@ body, html {
     left: 0;
     width: 200px; /* Set width for when it's visible */
     height: 100%;
-    background: #4CAF50; /* Match hexagon color */
+    background: #3be477; /* Match hexagon color */
     padding-top: 60px;
     transition: 0.3s;
     display: none; /* Hide by default */
@@ -124,6 +125,7 @@ body, html {
     opacity: 0;
     transition: 0.3s;
 }
+
 .sidebar.active .nav-text {
     opacity: 1;
 }
@@ -184,7 +186,7 @@ body, html {
     font-size: 16px;
     font-weight: bold;
     color: white;
-    background: #4CAF50 !important;
+    background: #3be477 !important;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -202,15 +204,13 @@ body, html {
     position: fixed !important;
     width: 60px;
     height: 34.64px;
-    background-color: #4CAF50; /* Default color */
+    background-color: #3be477; /* Default color */
     margin: 17.32px 0;
     transform: rotate(90deg);
-    animation: move 10s infinite;
-    transition: background-color 0.5s ease;
     z-index: 0; /* Set z-index lower than content */
-    
 }
 
+/* Hexagon shape using :before and :after */
 .hexagon:before,
 .hexagon:after {
     content: "";
@@ -223,20 +223,17 @@ body, html {
 
 .hexagon:before {
     bottom: 100%;
-    border-bottom: 17.32px solid #4CAF50; /* Default color */
+    border-bottom: 17.32px solid #3be477; /* Default color */
 }
 
 .hexagon:after {
     top: 100%;
     width: 0;
-    border-top: 17.32px solid #4CAF50; /* Default color */
-} 
-
-@keyframes move {
-    0% { transform: translate(0, 0) rotate(90deg); }
-    50% { transform: translate(200px, 200px) rotate(90deg); }
-    100% { transform: translate(0, 0) rotate(90deg); }
+    border-top: 17.32px solid #3be477; /* Default color */
 }
+
+/* Animation to move hexagons like DVD logo */
+
 
 .hexagon:hover {
     animation: none;
@@ -252,6 +249,7 @@ body, html {
 }
 
 /* Change colors on body hover */
+body.theme-yellow .hexagon,
 body.theme-yellow .header,
 body.theme-yellow .footer,
 body.theme-yellow .sidebar,

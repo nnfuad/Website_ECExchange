@@ -11,21 +11,14 @@
 </head>
 <body>
 
+    <!-- Header -->
+    <?php include 'header.php'; ?>
+
     <!-- Hexagons for Background -->
-    <div class="hexagon" style="top: 20%; left: 10%;"></div>
-    <div class="hexagon" style="top: 30%; left: 25%;"></div>
-    <div class="hexagon" style="top: 50%; left: 30%;"></div>
-    <div class="hexagon" style="top: 80%; left: 50%;"></div>
-    <div class="hexagon" style="top: 30%; left: 70%;"></div>
-    <div class="hexagon" style="top: 90%; left: 85%;"></div>
-    <div class="hexagon" style="top: 60%; left: 90%;"></div>
-    <div class="hexagon" style="top: 20%; left: 95%;"></div>
+    <?php include 'hexagons.php'; ?>
 
 <!-- Header -->
-<header class="header">
-    <span class="menu-toggle" onclick="toggleSidebar()" style="color: black;">☰</span>
-    <h1><a href="index.php" style="text-decoration: none;"><span class="plain-text"> ECExchange</span></a></h1>
-</header>
+
 
     <!-- Main Layout -->
     <div class="container">
@@ -61,6 +54,10 @@
         </div>
 
     </div>
+
+        <!-- Footer -->
+        <?php include 'footer.php'; ?>
+        <script src="js/script.js"></script>
 
 </body>
 </html>
