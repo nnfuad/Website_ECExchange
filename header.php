@@ -29,9 +29,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Login <img class="drop-arrow" src="img/down.png"></a>
                     <ul class="dropdown-content">
-                        <li><a href="web-design.php">Web Design</a></li>
-                        <li><a href="seo.php">SEO</a></li>
-                        <li><a href="marketing.php">Marketing</a></li>
+                        <li><a href="login.php">Log In</a></li>
+                        <li><a href="signup.php">Sign Up</a></li>
                     </ul>
                 </li>
             </ul>
