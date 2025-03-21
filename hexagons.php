@@ -1,4 +1,9 @@
-    <!-- Hexagons for Background -->
+<style>
+
+
+</style>
+
+<!-- Hexagons for Background -->
     <div class="hexagon" style="top: 20%; left: 10%;"></div>
     <div class="hexagon" style="top: 30%; left: 25%;"></div>
     <div class="hexagon" style="top: 50%; left: 30%;"></div>
@@ -7,9 +12,9 @@
     <div class="hexagon" style="top: 30%; left: 80%;"></div>
     <div class="hexagon" style="top: 90%; left: 85%;"></div>
     <div class="hexagon" style="top: 60%; left: 90%;"></div>
-    <div class="hexagon" style="top: 20%; left: 95%;"></div>
+    <div class="hexagon" style="top: 20%; left: 9%;"></div>
     <div class="hexagon" style="top: 10%; left: 5%;"></div>
-    <div class="hexagon" style="top: 30%; left: 95%;"></div>
+    <div class="hexagon" style="top: 30%; left: 80%;"></div>
     <div class="hexagon" style="top: 10%; left: 50%;"></div>
 
 <script>
@@ -28,7 +33,7 @@ function startHexagonMovement() {
         yPos = (yPos / 100) * window.innerHeight;
 
         let xSpeed = 3 + Math.random() * 3; // Random speed on x-axis
-        let ySpeed = 1 + Math.random() * 1; // Random speed on y-axis
+        let ySpeed = 1 + Math.random() * 2; // Random speed on y-axis
 
         // Function to move the hexagon
         function moveHexagon() {
@@ -61,4 +66,5 @@ function startHexagonMovement() {
 
 // Call the function to start the movement after page load
 window.onload = startHexagonMovement;
+
 </script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,16 @@
 <body>
 
 <!-- Navbar -->
-<nav class="bg-gray-800 p-4">
+<!-- <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-white text-xl font-bold">My Website</a>
+        <a href="#" class="text-white text-xl font-bold">My Website</a> -->
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6">
+        <!-- <div class="hidden md:flex space-x-6">
             <a href="#" class="text-white">Home</a>
-            <a href="#" class="text-white">About</a>
+            <a href="#" class="text-white">About</a> -->
 
-            <!-- Dropdown -->
+            <!-- Dropdown --><!--
             <div class="relative group">
                 <button class="text-white flex">Services </button>
                 <div class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2">
@@ -32,6 +32,78 @@
         </div>
     </div>
 </nav>
+
+
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flippable Word Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1.5s ease-in-out; /* Slow return */
+        }
+
+        .card-container:hover .card {
+            transition: transform 0.3s ease-in; /* Fast flip */
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background: #3498db;
+            color: white;
+        }
+
+        .back {
+            background: #2ecc71;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">Question</div>
+            <div class="card-face back">Answer</div>
+        </div>
+    </div>
 
 </body>
 </html>
