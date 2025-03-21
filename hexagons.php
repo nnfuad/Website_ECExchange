@@ -1,6 +1,70 @@
 <style>
+        /* Hexagon Background */
+        .hexagon {
+        position: fixed !important;
+        width: 60px;
+        height: 34.64px;
+        background-color: #3be477; /* Default color */
+        margin: 17.32px 0;
+        transform: rotate(90deg);
+        z-index: 0; /* Set z-index lower than content */
+    }
+    
+    /* Hexagon shape using :before and :after */
+    .hexagon:before,
+    .hexagon:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+    
+    .hexagon:before {
+        bottom: 100%;
+        border-bottom: 17.32px solid #3be477; /* Default color */
+    }
+    
+    .hexagon:after {
+        top: 100%;
+        width: 0;
+        border-top: 17.32px solid #3be477; /* Default color */
+    }
+    
+    .hexagon:hover{
+        animation: none;
+        background-color: #ffff00ea; /* Change to yellow on hover */
+
+    }
+   
+    .hexagon:hover:before {
+        border-bottom-color: #ffff00ea; /* Change to yellow on hover */
+
+    }
+    
+    .hexagon:hover:after {
+        border-top-color: #ffff00ea; /* Change to yellow on hover */
 
 
+    }
+
+
+/* Change colors on body hover */
+body.theme-yellow .hexagon,
+body.theme-yellow .header,
+body.theme-yellow .footer,
+body.theme-yellow .sidebar,
+body.theme-yellow .login-box button {
+    background: #ffff00ea;
+    color: black !important;
+}
+
+body.theme-yellow .hexagon::after,
+body.theme-yellow .hexagon::before{
+    border-bottom-color: #ffff00ea;
+    border-top-color: #ffff00ea;
+}
 </style>
 
 <!-- Hexagons for Background -->

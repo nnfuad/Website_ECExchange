@@ -25,15 +25,16 @@ function filterNavItems() {
     });
 }
 
-const hexagons = document.querySelectorAll('.hexagon');
-const body = document.body;
 
-hexagons.forEach(hexagon => {
-    hexagon.addEventListener('mouseenter', () => {
-body.classList.add('theme-yellow');
-    });
+// const hexagons = document.querySelectorAll('.hexagon');
+// const body = document.body;
 
-    hexagon.addEventListener('mouseleave', () => {
-        body.classList.remove('theme-yellow');
-    });
-});
+// hexagons.forEach(hexagon => {
+//     hexagon.addEventListener('mouseenter', () => {
+// body.classList.add('theme-yellow');
+//     });
+
+//     hexagon.addEventListener('mouseleave', () => {
+//         body.classList.remove('theme-yellow');
+//     });
+// });
