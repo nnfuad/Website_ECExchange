@@ -56,7 +56,7 @@ body.theme-yellow .header,
 body.theme-yellow .footer,
 body.theme-yellow .sidebar,
 body.theme-yellow .login-box button {
-    background: #ffff00ea;
+    background: #ffff00ea !important;
     color: black !important;
 }
 
@@ -130,5 +130,19 @@ function startHexagonMovement() {
 
 // Call the function to start the movement after page load
 window.onload = startHexagonMovement;
+
+
+const hexagons = document.querySelectorAll('.hexagon');
+const body = document.body;
+
+hexagons.forEach(hexagon => {
+    hexagon.addEventListener('mouseenter', () => {
+body.classList.add('theme-yellow');
+    });
+
+    hexagon.addEventListener('mouseleave', () => {
+        body.classList.remove('theme-yellow');
+    });
+});
 
 </script>

@@ -162,6 +162,7 @@ a {
     display: flex;
     align-items: center;
     padding: 10px;
+    height: 100px;
     text-decoration: none;
     color: black;
     transition: 0.3s;
