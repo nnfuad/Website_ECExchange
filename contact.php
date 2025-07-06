@@ -119,7 +119,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <!-- Google Maps API with PHP key -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=<?= $googleMapsApiKey ?>&callback=initMap"
     async defer>

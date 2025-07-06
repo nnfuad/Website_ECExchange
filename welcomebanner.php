@@ -103,8 +103,8 @@
     }
 
 .gallery-slider {
-  max-width: 90%;
-  height: 350px;  /* Adjust as needed */
+  max-width: 100%;
+  height: 400px;  /* Adjust as needed */
   margin: 50px auto;
   overflow: hidden;
   border-radius: 12px;
@@ -239,9 +239,13 @@
     <img src="img/eceOffice.jpeg" alt="ECE Office" />
     <img src="img/ece22Cover.jpeg" alt="ECE 22 Cover" />
     <img src="img/ecePhoto.jpeg" alt="Department Photo" />
+    <img src="img/event4.jpg" alt="Event 4" />
+    <img src="img/event5.jpeg" alt="Event 5" />
+    <img src="img/event6.jpeg" alt="Event 6" />
     <img src="img/even1.jpeg" alt="Event 1" />
     <img src="img/event2.jpeg" alt="Event 2" />
     <img src="img/event3.jpeg" alt="Event 3" />
+
   </div>
 </div>
   <!-- TESTIMONIAL -->

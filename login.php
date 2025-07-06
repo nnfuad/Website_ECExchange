@@ -54,7 +54,6 @@ body, html {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Left Welcome Panel */
 .welcome-panel {
   background: #4CAF50;
   color: white;
@@ -92,7 +91,7 @@ body, html {
   color: black;
 }
 
-/* Right Login Form */
+
 .login-form {
   width: 60%;
   padding: 40px;
@@ -165,7 +164,6 @@ body, html {
   color: #FFFFFF;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;

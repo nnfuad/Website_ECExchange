@@ -11,19 +11,13 @@
 </head>
 <body>
 
-    <!-- Header -->
     <?php include 'header.php'; ?>
 
-    <!-- Hexagons for Background -->
     <?php include 'hexagons.php'; ?>
 
-<!-- Header -->
 
-
-    <!-- Main Layout -->
     <div class="container">
         
-        <!-- Sidebar -->
         <nav class="sidebar">
             <input type="text" class="search-bar" placeholder="Search..." onkeyup="filterNavItems()">
             <ul class="nav-list">
@@ -55,7 +49,6 @@
 
     </div>
 
-        <!-- Footer -->
         <?php include 'footer.php'; ?>
         <script src="js/script.js"></script>
 
