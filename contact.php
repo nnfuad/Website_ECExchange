@@ -21,7 +21,6 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 60px 20px;
-      
     }
 
     h1 {
@@ -88,6 +87,22 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
+    .contact-info {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-info i {
+      color: #4CAF50;
+      margin-right: 10px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 8px 0;
+      opacity: 0.85;
+    }
+
     @media screen and (max-width: 768px) {
       .contact-wrapper {
         flex-direction: column;
@@ -107,13 +122,19 @@
     <div class="contact-wrapper">
       <form class="contact-form" method="POST" action="">
         <input type="text" name="name" placeholder="Your Name" required />
-        <input type="text" name="name" placeholder="Your ID" required />
+        <input type="text" name="student_id" placeholder="Your Student ID" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
 
       <div id="map"></div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ecexchange@ruet.edu.bd" style="color: #4CAF50;">ecexchange@ruet.edu.bd</a></p>
+      <p><i class="fas fa-phone"></i> Phone: <a href="tel:+8801234567890" style="color: #4CAF50;">+880 1234-567890</a></p>
     </div>
   </div>
 
@@ -126,7 +147,7 @@
 
   <script>
     function initMap() {
-      const ruetECE = { lat: 24.364257906768593, lng: 88.6298803441791 }; // ECE coordinates
+      const ruetECE = { lat: 24.364257906768593, lng: 88.6298803441791 };
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: ruetECE,
