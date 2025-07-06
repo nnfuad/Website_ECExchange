@@ -12,6 +12,7 @@
 <body>
     <!-- Header -->
     <?php include 'header.php'; ?>
+    <?php include 'sidebar.php'?>
 
     <!-- Hexagons for Background -->
     <?php include 'hexagons.php'; ?>
@@ -19,14 +20,10 @@
     <!-- Main Layout -->
     <div class="container">
         
-    <?php include 'sidebar.php'?>
+
 
         <!-- Scrollable Content -->
-        <div class="main-content">
-
-        
-            
-        </div>
+    <?php include 'welcomebanner.php'?>
 
     </div>
 

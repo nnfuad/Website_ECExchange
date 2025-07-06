@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECExchange</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
     </style>
@@ -43,30 +42,13 @@
 <!-- Navbar & Dropdown CSS -->
 <style>
 
-/*
-    Flickering animation
-    @keyframes flicker {
-        0% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-        10% { opacity: 0.8; text-shadow: none; }
-        20% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-        30% { opacity: 0.6; text-shadow: none; }
-        40% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-        50% { opacity: 0.7; text-shadow: none; }
-        60% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-        70% { opacity: 0.9; text-shadow: none; }
-        80% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-        90% { opacity: 0.5; text-shadow: none; }
-        100% { opacity: 1; text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-    }
-
-        .header-flick {
-        animation: flicker 23s infinite alternate;
-    }
-*/
-
-    /* Glitch Animation */
-
-
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
     
     @keyframes glitch {
         0% { transform: translate(0, 0); opacity: 1; }
@@ -135,13 +117,15 @@
         display: none;
         position: absolute;
         background-color: #4CAF50; /* Match header color */
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         min-width: 150px;
-        top: 100%;
+        height: 80px;
+        padding-top: 10px;
+        top: 90%;
         left: 0;
         border-radius: 5px;
         overflow: hidden;
-        z-index: 999;
+        z-index: 100;
+        transition: .3s ease;
     }
 
     .dropdown-content li {
@@ -150,10 +134,12 @@
 
     .dropdown-content a {
         padding: 10px;
+        padding-left: 20px;
         color: black;
         display: block;
-        font-size: 16px;
-        text-align: left;
+        font-size: 14px;
+        text-align: center;
+        
     }
 
     .dropdown-content a:hover {
@@ -173,4 +159,4 @@
     }
 
 </style>
-
+<script src="js/script.js"></script>

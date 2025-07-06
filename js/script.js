@@ -24,5 +24,3 @@ function filterNavItems() {
         item.style.display = text.toLowerCase().includes(filter) ? "" : "none";
     });
 }
-
-
