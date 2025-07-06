@@ -10,24 +10,17 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <?php include 'header.php'; ?>
     <?php include 'sidebar.php'?>
-
-    <!-- Hexagons for Background -->
     <?php include 'hexagons.php'; ?>
 
-    <!-- Main Layout -->
     <div class="container">
         
-
-
-        <!-- Scrollable Content -->
     <?php include 'welcomebanner.php'?>
 
     </div>
 
-    <!-- Footer -->
     <?php include 'footer.php'; ?>
     <script src="js/script.js"></script>
 </body>

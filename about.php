@@ -14,7 +14,7 @@
 <body>
 
     <?php include 'header.php'; ?>
-
+    <?php include 'sidebar.php'; ?>
     <?php include 'hexagons.php'; ?>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
