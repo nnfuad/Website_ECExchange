@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECExchange</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-    </style>
-</head>
+
 
 <!-- Header -->
 <header class="header">
-    <span class="menu-toggle" onclick="toggleSidebar()" style="color: black;">☰</span>
+    <span class="menu-toggle" onclick="toggleSidebar()" style="color: black; z-index: 1000; padding-bottom: 42%; position" >☰</span>
     <h1><a class="header-glitch" href="index.php" style="text-decoration: none;">
         <span class="plain-text">
             <img src="img/header_logo.png" style="height: 50px; width: auto; position: relative; top: 10px; left: 7px;">
@@ -143,7 +134,7 @@
     }
 
     .dropdown-content a:hover {
-        background: #4CAF50;;
+        background: #4CAF50;
         color: yellow;
     }
 

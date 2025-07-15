@@ -62,7 +62,7 @@ a {
     color: black;
 }
 .menu-toggle {
-    font-size: 24px;
+    font-size: 10px;
     cursor: pointer;
     position: absolute;
     left: 20px;
@@ -146,7 +146,7 @@ a {
     padding-top: 60px;
     transition: 0.3s;
     display: none; /* Hide by default */
-    z-index: 2; /* Ensure sidebar is above hexagons */
+    z-index: 100; /* Ensure sidebar is above hexagons */
 }
 .sidebar.active {
     display: block; /* Show when active */

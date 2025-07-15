@@ -67,12 +67,13 @@
 </style>
 
 <nav class="sidebar" id="sidebar">
-    <form action="search.php" method="GET" style="margin: 10px;">
-    <input type="text" id="sidebar-search" name="q" class="search-bar" placeholder="Search..." required>
+    <form action="search.php" method="GET">
+        <input type="text" name="q" class="search-bar" placeholder="Search..." />
     </form>
   <ul class="nav-list">
     <li><a href="index.php"><i class="fa-solid fa-house-chimney"></i><span class="nav-text"> Home</span></a></li>
     <li><a href="https://ecebooks-71501.web.app/" target="_blank"><i class="fa fa-book"></i><span class="nav-text"> Books</span></a></li>
+    <li><a href="resources.php"><i class="fas fa-cogs"></i><span class="nav-text"> Resources</span></a></li>
     <li><a href="#"><i class="fas fa-cogs"></i><span class="nav-text"> Services</span></a></li>
     <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i><span class="nav-text"> Student Login</span></a></li>
     <li><a href="login.php"><i class="fa-solid fa-chalkboard-user"></i><span class="nav-text"> Teacher Login</span></a></li>
@@ -83,13 +84,13 @@
 
 <!-- Sidebar Script -->
 <script>
-  // Toggle sidebar (used by ☰ button)
+
   function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('active');
   }
 
-  // Close sidebar when clicking outside
+  
   document.addEventListener('click', function (event) {
     const sidebar = document.querySelector('.sidebar');
     const toggleButton = document.querySelector('.menu-toggle');
@@ -98,7 +99,7 @@
     }
   });
 
-  // Filter nav items
+
   function filterNavItems() {
     const input = document.getElementById('sidebar-search');
     const filter = input.value.toLowerCase();
@@ -110,7 +111,7 @@
     });
   }
 
-  // Open sidebar and focus search
+
   function openAndFocusSearch(event) {
     event.preventDefault();
     const sidebar = document.querySelector('.sidebar');
@@ -118,6 +119,6 @@
     sidebar.classList.add('active');
     setTimeout(() => {
       searchInput.focus();
-    }, 200); // Delay ensures smooth transition
+    }, 200);
   }
 </script>

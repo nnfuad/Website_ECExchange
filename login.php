@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,6 +131,7 @@ body, html {
   color: #999;
 }
 
+
 .forgot-password {
   font-size: 12px;
   color: rgba(255,255,255,0.9);
@@ -202,34 +205,80 @@ body, html {
       <a href="signup.php"><button>Register</button></a>
     </div>
 
-    <form class="login-form">
-      <h2>Login</h2>
+    <form class="login-form" id="login-form">
+  <h2>Login</h2>
 
-      <div class="input-group">
-        <input type="text" placeholder="Username" required />
-        <i class="fas fa-user"></i>
-      </div>
+  <div class="input-group">
+    <input type="text" id="email" name="email" placeholder="Email" required />
+    <i class="fas fa-user"></i>
+  </div>
 
-      <div class="input-group">
-        <input type="password" placeholder="Password" required />
-        <i class="fas fa-lock"></i>
-      </div>
+<div class="input-group">
+  <input type="password" id="password" name="password" placeholder="Password" required />
+  <i class="fas fa-lock"></i>
+  <i class="fas fa-eye toggle-password" id="togglePassword" style="cursor:pointer; right: 40px; position: absolute; top: 50%; transform: translateY(-50%); color: #999;"></i>
+</div>
 
-      <p class="forgot-password">Forgot password?</p>
+  <p class="forgot-password">Forgot password?</p>
 
-      <button type="submit" class="login-button">Login</button>
+  <button type="submit" class="login-button">Login</button>
 
-      <p class="or-divider">or login with</p>
+  <p class="or-divider">or login with</p>
 
-      <div class="social-icons">
-        <button type="button"><i class="fab fa-google"></i></button>
-        <button type="button"><i class="fab fa-facebook-f"></i></button>
-        <button type="button"><i class="fab fa-github"></i></button>
-        <button type="button"><i class="fab fa-linkedin-in"></i></button>
-      </div>
-    </form>
+  <div class="social-icons">
+    <button type="button"><i class="fab fa-google"></i></button>
+    <button type="button"><i class="fab fa-facebook-f"></i></button>
+    <button type="button"><i class="fab fa-github"></i></button>
+    <button type="button"><i class="fab fa-linkedin-in"></i></button>
+  </div>
+</form>
   </div>
     <?php include 'footer.php'; ?>
     <script src="js/script.js"></script>
+    <!-- <script src="js/firebase.js"></script> -->
+  <script type="module">
+
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+  
+    
+    this.classList.toggle('fa-eye-slash');
+});
+
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNRIJc8td0k03lKHnJ6lHAHlWXdY6yhbM",
+    authDomain: "ecexchange-b6fd4.firebaseapp.com",
+    projectId: "ecexchange-b6fd4",
+    storageBucket: "ecexchange-b6fd4.appspot.com",
+    messagingSenderId: "702935738337",
+    appId: "1:702935738337:web:8419f6f6c7dd8644db54a0"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  document.getElementById("login-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent page reload
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("Login successful!");
+        window.location.href = "dashboard.php";
+      })
+      .catch((error) => {
+        alert("Login failed: " + error.message);
+      });
+  });
+</script>
+
 </body>
 </html>

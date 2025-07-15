@@ -228,5 +228,48 @@
   </div>
 
   <?php include 'footer.php'; ?>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNRIJc8td0k03lKHnJ6lHAHlWXdY6yhbM",
+    authDomain: "ecexchange-b6fd4.firebaseapp.com",
+    projectId: "ecexchange-b6fd4",
+    storageBucket: "ecexchange-b6fd4.firebasestorage.app",
+    messagingSenderId: "702935738337",
+    appId: "1:702935738337:web:8419f6f6c7dd8644db54a0"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const form = document.querySelector('.login-form');
+  const emailInput = form.querySelector('input[type="email"]');
+  const passwordInput = form.querySelectorAll('input[type="password"]')[0];
+  const confirmPasswordInput = form.querySelectorAll('input[type="password"]')[1];
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("Signup successful!");
+        window.location.href = "login.php"; // Redirect to login page
+      })
+      .catch((error) => {
+        alert("Error: " + error.message);
+      });
+  });
+</script>
 </body>
 </html>

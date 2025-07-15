@@ -4,13 +4,13 @@
         position: fixed !important;
         width: 60px;
         height: 34.64px;
-        background-color: #3be477; /* Default color */
+        background-color: #3be477;
         margin: 17.32px 0;
         transform: rotate(90deg);
-        z-index: 0; /* Set z-index lower than content */
+        z-index: 0;
     }
     
-    /* Hexagon shape using :before and :after */
+    
     .hexagon:before,
     .hexagon:after {
         content: "";
@@ -23,34 +23,33 @@
     
     .hexagon:before {
         bottom: 100%;
-        border-bottom: 17.32px solid #3be477; /* Default color */
+        border-bottom: 17.32px solid #3be477;
     }
     
     .hexagon:after {
         top: 100%;
         width: 0;
-        border-top: 17.32px solid #3be477; /* Default color */
+        border-top: 17.32px solid #3be477;
     }
     
     .hexagon:hover{
         animation: none;
-        background-color: #ffff00ea; /* Change to yellow on hover */
+        background-color: #ffff00ea;
 
     }
    
     .hexagon:hover:before {
-        border-bottom-color: #ffff00ea; /* Change to yellow on hover */
+        border-bottom-color: #ffff00ea;
 
     }
     
     .hexagon:hover:after {
-        border-top-color: #ffff00ea; /* Change to yellow on hover */
+        border-top-color: #ffff00ea;
 
 
     }
 
 
-/* Change colors on body hover */
 body.theme-yellow .hexagon,
 body.theme-yellow .header,
 body.theme-yellow .footer,
@@ -67,7 +66,6 @@ body.theme-yellow .hexagon::before{
 }
 </style>
 
-<!-- Hexagons for Background -->
     <div class="hexagon" style="top: 20%; left: 10%;"></div>
     <div class="hexagon" style="top: 30%; left: 25%;"></div>
     <div class="hexagon" style="top: 50%; left: 30%;"></div>
@@ -82,53 +80,48 @@ body.theme-yellow .hexagon::before{
     <div class="hexagon" style="top: 10%; left: 50%;"></div>
 
 <script>
-    // Function to move hexagons like DVD logo animation
+    
 function startHexagonMovement() {
-    // Select all hexagons
+    
     const hexagons = document.querySelectorAll('.hexagon');
     
     hexagons.forEach(hexagon => {
-        // Get the initial position from inline styles
-        let xPos = parseFloat(hexagon.style.left);  // Initial horizontal position (percentage value)
-        let yPos = parseFloat(hexagon.style.top);   // Initial vertical position (percentage value)
+    
+        let xPos = parseFloat(hexagon.style.left);
+        let yPos = parseFloat(hexagon.style.top);   
 
-        // Convert percentage values to actual pixel positions based on the window size
+        
         xPos = (xPos / 100) * window.innerWidth;
         yPos = (yPos / 100) * window.innerHeight;
 
-        let xSpeed = 3 + Math.random() * 3; // Random speed on x-axis
-        let ySpeed = 1 + Math.random() * 2; // Random speed on y-axis
+        let xSpeed = 3 + Math.random() * 3;
+        let ySpeed = 1 + Math.random() * 2;
 
-        // Function to move the hexagon
         function moveHexagon() {
-            // Update position
+            
             xPos += xSpeed;
             yPos += ySpeed;
 
-            // Check for horizontal boundary collision (left and right)
+            
             if (xPos + 60 > window.innerWidth || xPos < 0) {
-                xSpeed = -xSpeed; // Reverse the horizontal speed to bounce off
+                xSpeed = -xSpeed;
             }
 
-            // Check for vertical boundary collision (top and bottom)
+            
             if (yPos + 34.64 > window.innerHeight || yPos < 0) {
-                ySpeed = -ySpeed; // Reverse the vertical speed to bounce off
+                ySpeed = -ySpeed;
             }
 
-            // Apply new position to the hexagon (convert back to percentage)
             hexagon.style.left = `${(xPos / window.innerWidth) * 100}%`;
             hexagon.style.top = `${(yPos / window.innerHeight) * 100}%`;
 
-            // Keep the hexagon moving
             requestAnimationFrame(moveHexagon);
         }
 
-        // Start the movement for this hexagon
         moveHexagon();
     });
 }
 
-// Call the function to start the movement after page load
 window.onload = startHexagonMovement;
 
 
