@@ -19,7 +19,7 @@
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
   
-  <!-- About Website -->
+  <!-- About Website Container -->
   <div class="card-container">
     <div class="card">
       <div class="card-face front">
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <!-- How it Started -->
+  <!-- How it Started Container -->
   <div class="card-container">
     <div class="card">
       <div class="card-face front">
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <!-- Why ECExchange? -->
+  <!-- Why ECExchange? Containe -->
   <div class="card-container">
     <div class="card">
       <div class="card-face front">
@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <!-- Features at a Glance -->
+  <!-- Features at a Glance con -->
   <div class="card-container">
     <div class="card">
       <div class="card-face front">

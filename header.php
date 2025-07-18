@@ -2,7 +2,7 @@
 
 <!-- Header -->
 <header class="header">
-    <span class="menu-toggle" onclick="toggleSidebar()" style="color: black; z-index: 1000; padding-bottom: 42%; position" >☰</span>
+    <span class="menu-toggle" onclick="toggleSidebar()" style="color: black; z-index: 1000; padding-bottom: 42%; position:absolute; font-size: 20px;" >☰</span>
     <h1><a class="header-glitch" href="index.php" style="text-decoration: none;">
         <span class="plain-text">
             <img src="img/header_logo.png" style="height: 50px; width: auto; position: relative; top: 10px; left: 7px;">
@@ -10,7 +10,6 @@
         </span>
     </a></h1>
 
-        <!-- Navbar -->
         <nav>
             <ul class="navbar">
                 <li><a href="index.php">Home</a></li>
@@ -30,10 +29,8 @@
 </header>
 
 
-<!-- Navbar & Dropdown CSS -->
 <style>
 
-    /* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -64,14 +61,12 @@
     }
 
 
-    /* Apply glitch effect */
     .header-glitch:hover {
         animation: glitch 2s infinite ease-in-out, glitch-color 1s infinite ease-in-out;
         animation-delay: 0s;
     }
 
 
-    /* Navbar */
     .navbar {
         list-style: none;
         display: flex;
@@ -84,7 +79,6 @@
         position: relative;
     }
 
-    /* Navbar links */
     .navbar a {
         text-decoration: none;
         color: black;
@@ -99,7 +93,6 @@
         color: #ffeb3b;
     }
 
-    /* Dropdown Menu */
     .dropdown {
         position: relative;
     }
@@ -107,7 +100,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #4CAF50; /* Match header color */
+        background-color: #4CAF50;
         min-width: 150px;
         height: 80px;
         padding-top: 10px;
@@ -138,7 +131,6 @@
         color: yellow;
     }
 
-    /* Show dropdown on hover */
     .dropdown:hover .dropdown-content {
         display: block;
     }

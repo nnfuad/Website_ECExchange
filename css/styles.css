@@ -20,9 +20,9 @@ a {
     display: inline !important;
 }
 
-/* Header */
+
 .header {
-    background: #3be477; /* Match hexagon color */
+    background: #3be477; 
     color: black;
     display: flex;
     align-items: center;
@@ -43,18 +43,18 @@ a {
 }
 
 
-/* Footer */
+
 .footer {
     position: fixed;
     bottom: 0;
     height: 20px;
     width: 100%;
-    background: #3be477; /* Ensure background is visible */
+    background: #3be477;
     color: black;
     text-align: center;
     padding-bottom: 10px;
     font-weight: bold;
-    z-index: 1000; /* Ensures it is above other content */
+    z-index: 1000;
 }
 
 .plain-text {
@@ -71,7 +71,6 @@ a {
     color: black;
 }
 
-/* Layout */
 .container {
     display: flex;
     flex: 1;
@@ -109,12 +108,12 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column; /* Stack text elements vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    text-align: center; /* Center text inside */
-    padding: 15px; /* Add spacing around text */
+    text-align: center;
+    padding: 15px;
     box-sizing: border-box;
     backface-visibility: hidden;
 }
@@ -140,16 +139,16 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: auto; /* Set width for when it's visible */
+    width: auto;
     height: 100%;
-    background: #3be477; /* Match hexagon color */
+    background: #3be477;
     padding-top: 60px;
     transition: 0.3s;
-    display: none; /* Hide by default */
-    z-index: 100; /* Ensure sidebar is above hexagons */
+    display: none;
+    z-index: 100;
 }
 .sidebar.active {
-    display: block; /* Show when active */
+    display: block;
     opacity: .9;
 }
 .nav-list {
@@ -196,7 +195,7 @@ a {
     opacity: 1;
 }
 
-/* Search Bar */
+
 .search-bar {
     padding: 10px;
     margin: 10px;
@@ -205,16 +204,16 @@ a {
     width: calc(100% - 25px);
 }
 
-/* Scrollable Content */
+
 .main-content {
     flex: 1;
     padding: 20px;
     padding-bottom: 50px;
-    margin-left: 0; /* No margin when sidebar is hidden */
+    margin-left: 0;
     height: fit-content;
     overflow-y: auto;
     transition: 0.3s;
-    z-index: 1; /* Ensure content is above hexagons */
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
+    z-index: 1; 
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
 }

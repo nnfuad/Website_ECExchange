@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <style>
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 140px); /* header + footer height */
+  min-height: calc(100vh - 140px);
   margin: 100px;
   display: flex;
   align-items: center;
@@ -265,14 +265,14 @@ body, html {
   const auth = getAuth(app);
 
   document.getElementById("login-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         alert("Login successful!");
-        window.location.href = "dashboard.php";
+        window.location.href = "dashboard.php";// doesn't work
       })
       .catch((error) => {
         alert("Login failed: " + error.message);

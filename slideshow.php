@@ -3,7 +3,6 @@
     <img src="img/eceOffice.jpeg" alt="Image 1">
     <img src="img/ece22Cover.jpeg" alt="Image 2">
     <img src="img/ecePhoto.jpeg" alt="Image 3">
-    <!-- Add more images as needed -->
   </div>
 </div>
 
@@ -22,7 +21,7 @@
 
 .slides {
   display: flex;
-  width: 300%; /* 100% * number of images */
+  width: 300%;
   height: 100%;
   animation: slide 7s infinite;
 }
@@ -33,7 +32,6 @@
   object-fit: cover;
 }
 
-/* Auto Slide Animation */
 @keyframes slide {
   0%   { transform: translateX(0); }
   33%  { transform: translateX(0); }

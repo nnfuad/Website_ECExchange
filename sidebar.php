@@ -1,4 +1,3 @@
-<!-- Sidebar -->
 <style>
   .sidebar {
     position: fixed;

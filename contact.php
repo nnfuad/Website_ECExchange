@@ -131,7 +131,6 @@
       <div id="map"></div>
     </div>
 
-    <!-- Contact Info -->
     <div class="contact-info">
       <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ecexchange@gmail.com" style="color: #4CAF50;">ecexchange@gmail.com</a></p>
       <p><i class="fas fa-phone"></i> Phone: <a href="tel:+8801XXXXXX" style="color: #4CAF50;">+880 1XXX-XXXXXX</a></p>

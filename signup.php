@@ -264,7 +264,7 @@
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         alert("Signup successful!");
-        window.location.href = "login.php"; // Redirect to login page
+        window.location.href = "login.php";// works
       })
       .catch((error) => {
         alert("Error: " + error.message);

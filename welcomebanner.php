@@ -125,10 +125,10 @@
   flex: 0 0 100%;
   height: 100%;
   width: 100%;
-  object-fit: contain; /* This fits the entire image without cropping */
-  background-color: rgba(255, 255, 255, 0.09); /* Optional: fills space around image */
+  object-fit: contain; 
+  background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(12px);
-  padding: 10px; /* Optional: adds spacing to look clean */
+  padding: 10px;
 }
 
   @keyframes slideGallery {

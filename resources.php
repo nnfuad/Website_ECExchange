@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <link rel="stylesheet" href="css/styles.css">
+
   <title>Resources - ECExchange</title>
   <style>
     body {
@@ -129,7 +131,6 @@
   <h1>Explore Semester Resources</h1>
   <div class="semester-grid">
 
-    <!-- Year/Semester Boxes -->
 <?php
 $coursesBySemester = [
     "1st Year Odd Semester" => [
@@ -230,9 +231,8 @@ $coursesBySemester = [
     ]
 ];
 
-// Optional courses (from your 4th year image)
 $optionalCourses = [
-    "Optional IT Courses" => [
+    "Optional I/II Courses" => [
         "Digital Communication",
         "Antennas & Propagations",
         "Radio & Satellite Communication",
@@ -249,7 +249,7 @@ $optionalCourses = [
     ]
 ];
 
-  // Display cards
+  
   foreach ($coursesBySemester as $semester => $courses) {
     echo "<div class='semester-box'>";
     echo "<h2>$semester</h2>";
@@ -261,7 +261,7 @@ $optionalCourses = [
     echo "</div>";
   }
 
-  // Display optional courses separately
+
 echo "<div class='optional-courses'>";
 foreach ($optionalCourses as $category => $courses) {
     echo "<h3>$category</h3>";
@@ -274,7 +274,7 @@ foreach ($optionalCourses as $category => $courses) {
 echo "</div>";
 ?>
 
-    <!-- Extra Sections -->
+
     <div class="semester-box">
       <h2>Research Papers</h2>
       <ul>

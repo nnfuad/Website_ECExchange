@@ -100,7 +100,7 @@ $coursesBySemester = [
 ];
 
 $optionalCourses = [
-    "Optional IT Courses" => [
+    "Optional I/II Courses" => [
         "Digital Communication",
         "Antennas & Propagations",
         "Radio & Satellite Communication",

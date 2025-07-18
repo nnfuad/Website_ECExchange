@@ -1,5 +1,5 @@
 <style>
-        /* Hexagon Background */
+
         .hexagon {
         position: fixed !important;
         width: 60px;

@@ -2,7 +2,7 @@
 include 'header.php';
 include 'hexagons.php';
 include 'sidebar.php';
-include 'courses.php'; // brings in course data
+include 'courses.php';
 ?>
 
 <!DOCTYPE html>
@@ -69,14 +69,14 @@ include 'courses.php'; // brings in course data
     if (isset($_GET['q']) && !empty(trim($_GET['q']))) {
       $query = strtolower(trim($_GET['q']));
 
-      // Flatten course data from included resources
       $searchItems = [];
 
       foreach ($coursesBySemester as $semester => $courses) {
         foreach ($courses as $course) {
-          $searchItems[$course] = '#'; // Placeholder for now
+          $searchItems[$course] = '#';
         }
       }
+      //placeholder: 
 
       foreach ($optionalCourses as $category => $courses) {
         foreach ($courses as $course) {

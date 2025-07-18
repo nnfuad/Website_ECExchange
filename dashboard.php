@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// OPTIONAL: If using dummy login session
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit();
@@ -68,7 +67,7 @@ if (!isset($_SESSION['user'])) {
       });
     }
 
-    window.logout = logout; // Make it available globally
+    window.logout = logout;
   </script>
 </body>
 </html>
